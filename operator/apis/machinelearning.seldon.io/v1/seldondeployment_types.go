@@ -289,6 +289,7 @@ type Explainer struct {
 }
 
 type SeldonPodSpec struct {
+	// +kubebuilder:validation:XPreserveUnknownFields
 	Metadata metav1.ObjectMeta       `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
 	Spec     v1.PodSpec              `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
 	HpaSpec  *SeldonHpaSpec          `json:"hpaSpec,omitempty" protobuf:"bytes,3,opt,name=hpaSpec"`

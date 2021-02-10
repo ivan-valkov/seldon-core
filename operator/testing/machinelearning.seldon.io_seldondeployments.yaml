@@ -438,6 +438,7 @@ spec:
                           type: object
                         metadata:
                           type: object
+                          x-kubernetes-preserve-unknown-fields: true
                         pdbSpec:
                           properties:
                             maxUnavailable:
